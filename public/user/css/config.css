@@ -1,0 +1,62 @@
+.config{
+	position: fixed;
+	top: 80px;
+	left: -80px;
+	-webkit-transition: 0.3s ease;
+  	transition: 0.3s ease;
+  	z-index: 999;
+}
+
+
+.config-options ul {
+    padding-right: 7px;
+    margin-top: -8px;
+}
+
+
+
+.config-options .list-unstyled{
+	margin-bottom: 20px;
+}
+
+.config-options .list-unstyled:last-child{
+	margin-bottom: 0;
+}
+
+.config-options .list-unstyled > li > a{
+	display: block;
+	padding-left: 5px;
+}
+
+.config-options .list-unstyled > li > a:hover{
+	background-color: #fff;
+	text-decoration:none;
+}
+
+.show-theme-options:hover,.show-theme-options:focus{
+	text-decoration:none;
+	color:#fff;
+}
+
+.config.open{
+	left: 0;
+}
+
+.config .dropdown .dropdown-toggle{
+	padding: 6px 12px;
+}
+
+.config .dropdown .dropdown-toggle:after{
+	content: none;
+}
+
+.config-options ul li{
+	list-style: none;
+	margin-left: -37px;
+	margin-bottom: 10px;
+}
+
+.config-options ul li a{
+	padding: 5px;
+}
+    
