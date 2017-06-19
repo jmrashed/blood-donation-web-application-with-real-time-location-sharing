@@ -312,8 +312,7 @@ form .form-group {
   }
 }
 
- 
-@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+  
 .comment-list .row {
   margin-bottom: 0px;
 }
@@ -390,10 +389,7 @@ form .form-group {
   margin-top: 6px;
 }
 
- 
-                    
-    /* uses font awesome for social icons */
-@import url(http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+  
 
 .page-header{
   text-align: center;    

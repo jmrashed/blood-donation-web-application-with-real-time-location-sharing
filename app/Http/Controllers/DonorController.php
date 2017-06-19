@@ -9,6 +9,7 @@ use App\District;
 use App\Upazila;
 use App\Libraries\Common;
 use DB;
+
 class DonorController extends Controller {
 
     public function index() {
@@ -43,7 +44,7 @@ class DonorController extends Controller {
     public function store(Request $request) {
         $Donor = new Donor;
         $common = new Common;
-        
+
         $Donor->fullname = $request->fullname;
         $Donor->email = $request->email;
         $Donor->fcm_email = $request->email;
@@ -81,19 +82,19 @@ class DonorController extends Controller {
         $Donor->updated_by = 2;
 
         $Donor->save();
-        
-        $last_insert_id=$Donor->id;
-        
+
+        $last_insert_id = $Donor->id;
+
         $Donor_file = new Donor;
         $Donor_file = Donor::find($last_insert_id);
         if ($request->profile_photo) {
-             
-            $fileName = $last_insert_id.'_'.$request->fullname;
+
+            $fileName = $last_insert_id . '_' . $request->fullname;
             $profile_photo = $common->uploadImage('profile_photo', 'images/profile', $fileName);
             $Donor_file->profile_photo = $profile_photo;
             $Donor_file->save();
         }
-        
+
         return redirect('/donor');
     }
 
@@ -141,31 +142,49 @@ class DonorController extends Controller {
     public function donate() {
         return view('user/donationPage');
     }
-   public function search(Request $request) {
-        $donor = new Donor;
+
+    public function search(Request $request) {
         $data['division'] = Division::all();
-          
-        $str= "SELECT * FROM donors  WHERE blood_group='$request->blood_group' "; 
-        if(isset($request->division)){
-        $str .= "AND division_id=".$request->division;
-        }   
-        if(isset($request->district)){
-        $str .= "OR district=".$request->district;
-        }       
-        if(isset($request->upazila)){
-        $str .= "OR upazila=".$request->upazila;
-        }        
-        //$sql= "SELECT * FROM donor  WHERE division_id=$request->division OR  district= $request->district OR upazila=$request->upazila";
-        $data['result'] = DB::select($str); 
-        //dd($data);
-        
+        $donor = new Donor;
+        $post_division = $request->division;
+        $post_blood_group = $request->blood_group;
+        $post_district = $request->district;
+        $post_upazila = $request->upazila;
+        //dd($post_blood_group);
+        if ($post_division == 0 && $post_blood_group == '0') {
+            $str = "SELECT * FROM donors"; 
+        } elseif ($post_division == 0 && $post_blood_group != '0') {
+            $str = "SELECT * FROM donors  WHERE blood_group='$post_blood_group' ";
+        }elseif ($post_division != 0 && $post_blood_group != '0') {
+            $str = "SELECT * FROM donors  WHERE blood_group='$post_blood_group' AND ";
+        }
+        if ($post_division != 0 && $post_blood_group == '0') {
+             $str = "SELECT * FROM donors  WHERE";
+        }
+
+    //dd($str);
+        if ($request->division != 0) {
+            if (isset($request->division)) {
+                $str .= "  division_id=" . $request->division;
+            }
+            if (isset($request->district)) {
+                $str .= " AND district=" . $request->district;
+            }
+            if (isset($request->upazila)) {
+                $str .= " AND upazila=" . $request->upazila;
+            }
+        }
+
+   //dd($str);
+        $data['result'] = DB::select($str);
         return view('search.ajax_search')->with('data', $data);
     }
 
+
     public function viewprofile($id) {
         $donor = new Donor;
-        $data['donor_single']= $donor-> where('id',$id)->get();
+        $data['donor_single'] = $donor->where('id', $id)->get();
         return view('search.viewprofile')->with('data', $data);
-        
     }
+
 }
