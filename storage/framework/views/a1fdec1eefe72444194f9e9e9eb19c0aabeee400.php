@@ -24,8 +24,8 @@
                         <div class="row">
                             <?php $__currentLoopData = $data['donor_single']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $row): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <div class="col-md-4">
-                                <div class="thumbnail" style="width: 200px;height: 210px">
-                                    <img src="<?php echo e(asset('/public/images')); ?>/<?php echo e($row->profile_photo); ?>" />
+                                <div>
+                                    <img class="img img-responsive img-thumbnail" src="<?php echo e(asset('/public/images')); ?>/<?php echo e($row->profile_photo); ?>" />
                                 </div>
                                 <h3><?php echo e($row->fullname); ?></h3>
                                 <h4><b>Blood Group: </b><?php echo e($row->blood_group); ?></h4>

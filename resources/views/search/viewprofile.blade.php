@@ -27,8 +27,8 @@
                         <div class="row">
                             @foreach($data['donor_single'] as $row)
                             <div class="col-md-4">
-                                <div class="thumbnail" style="width: 200px;height: 210px">
-                                    <img src="{{asset('/public/images')}}/{{$row->profile_photo}}" />
+                                <div>
+                                    <img class="img img-responsive img-thumbnail" src="{{asset('/public/images')}}/{{$row->profile_photo}}" />
                                 </div>
                                 <h3>{{$row->fullname}}</h3>
                                 <h4><b>Blood Group: </b>{{$row->blood_group}}</h4>
