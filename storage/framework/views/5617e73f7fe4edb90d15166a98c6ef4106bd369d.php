@@ -65,10 +65,10 @@
         <!-- Default box -->
         <div class="box box-info">
             <div class="box-header with-border">
-                <h3 class="box-title">New Donor </h3>
+                <h3 class="box-title">New Doctor </h3>
 
                 <div class="box-tools pull-right">
-                    <a href="<?php echo e(url('/donor')); ?>" class="">      
+                    <a href="<?php echo e(url('/admin/doctor/view')); ?>" class="">      
                         <i class="fa fa-undo" aria-hidden="true"></i> back
                     </a>
 
@@ -77,7 +77,7 @@
 
             <div class="box-body">
                 <!-- form start -->
-                <form class="form-horizontal" action="<?php echo e(url('/donor/store')); ?>" method="post" enctype= "multipart/form-data"> 
+                <form class="form-horizontal" action="<?php echo e(url('/admin/doctor/store')); ?>" method="post" enctype= "multipart/form-data"> 
                     <?php echo csrf_field(); ?>
 
 
@@ -94,217 +94,74 @@
                     </div>
 
                     <div class="form-group">
+                        <label for="name" class="col-md-4 control-label">Doctor Namel</label>
+                        <div class="col-md-6">
+                            <input id="name" type="text" class="form-control" name="name"  autofocus>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-md-4 control-label">Speacility</label>
+                        <div class="col-md-6">
+                            <select name="speacilist" class="form-control">
+                                <option>--Selelect Speacility---</option>
+                                <?php $__currentLoopData = $data['specility']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <option value="<?php echo e($value->id); ?>"><?php echo e($value->name); ?></option>
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-md-4 control-label">Designation</label>
+                        <div class="col-md-6">
+                            <select name="designation" class="form-control">
+                                <option>--Selelect Designation---</option>
+                                <?php $__currentLoopData = $data['designation']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <option value="<?php echo e($value->id); ?>"><?php echo e($value->name); ?></option>
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <label for="name" class="col-md-4 control-label">Email</label>
                         <div class="col-md-6">
                             <input id="name" type="email" class="form-control" name="email"  autofocus>
                         </div>
                     </div>
-
-                    <div class="form-group">
-                        <label for="name" class="col-md-4 control-label">Password</label>
-                        <div class="col-md-6">
-                            <input id="name" type="password" class="form-control" name="password"  autofocus>
-                        </div>
-                    </div>
-
-
-                    <div class="form-group">
-                        <label for="name" class="col-md-4 control-label">Gender</label>
-                        <div class="col-md-6">
-                            <input id="name" type="radio" name="gender" value="male" >Male &nbsp;&nbsp;&nbsp;
-                            <input id="name" type="radio" name="gender" value="female" >Female
-                            <input type="hidden" value="67890" name="donner_id">
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="name" class="col-md-4 control-label">Date of Birth</label>
-                        <div class="col-md-2">
-                            <input id="name" type="date" class="form-control" name="date_of_birth"  autofocus>
-                        </div> 
-                        <label for="name" class="col-md-2 control-label">Last Donate</label>
-                        <div class="col-md-2">
-                            <input id="name" type="date" class="form-control" name="last_donate_date"  autofocus>
-                        </div>
-                    </div>
-
                     <div class="form-group">
                         <label for="name" class="col-md-4 control-label">Phone</label>
                         <div class="col-md-6">
                             <input id="name" type="number" class="form-control" name="phone"  autofocus>
                         </div>
                     </div>
-
                     <div class="form-group">
-                        <label for="name" class="col-md-4 control-label">Division</label>
-                        <div class="col-md-2">
-                            <select name="division" class="divisions form-control">
-
-                                 
-                            </select>
-                        </div> 
-                        <label for="email" class="col-md-2 control-label">District</label>
-
-                        <div class="col-md-2">
-                            <select name="district" id="districts" class="districts form-control"> 
-                            </select>
-
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="email" class="col-md-4 control-label">Upazilla</label>
-
-                        <div class="col-md-2">
-                            <select name="upazila" id="upazillas" class="form-control"> 
-                            </select>
-
-                        </div>
-
-                        <label class="col-md-2 control-label">Post Code</label>
-                        <div class="col-md-2">
-                            <input type="number" class="form-control" name="post_code" placeholder="Post Code">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="password" class="col-md-4 control-label">Location</label>
-
-                        <div class="col-md-6" style="height: 150px;">
-                            <input name="location" id="pac-input" class=" form-control" type="text" placeholder="Search Box">
-                            <div id="map" style="overflow: hidden;"></div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email" class="col-md-4 control-label">Blood Group</label>
-
-                        <div class="col-md-2">
-                            <select name="blood_group" class="form-control">
-                                <option value="A+">A+</option>
-                                <option value="AB+">AB+</option>
-                                <option value="B+">B+</option>
-                                <option value="O+">O+</option>
-                                <option value="A-">A-</option>
-                                <option value="AB-">AB-</option>
-                                <option value="B-">B-</option>
-                                <option value="O-">O-</option> 
-                            </select>
-
-                        </div> 
-                        <label for="email" class="col-md-2 control-label">Profile Photo</label>
-
-                        <div class="col-md-2">
-                            <input type="file" class="form-control"  name="profile_photo" />
-
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="email" class="col-md-4 control-label">Called Date</label>
-
-                        <div class="col-md-2">
-                            <input type="date" class="form-control"  name="called_date" />
-                        </div> 
-                        <label for="email" class="col-md-2 control-label">Called Today</label>
-
-                        <div class="col-md-2">
-                            <input type="date" class="form-control"  name="called_today" />
-
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="email" class="col-md-4 control-label">Religion</label>
-
-                        <div class="col-md-2">
-                            <select name="religion" class="form-control">
-                                <option value="Muslim">Muslim</option>
-                                <option value="Hindu">Hindu</option>
-                                <option value="Christian">Christian</option>
-                                <option value="Other">Other</option>
-                            </select>
-                        </div> 
-                        <label for="email" class="col-md-2 control-label">Is Physically Disable</label>
-
-                        <div class="col-md-2">
-                            <select name="is_physically_disble" class="form-control">
-                                <option value="Yes">Yes</option>
-                                <option value="No">No</option>
-                            </select>
-
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="email" class="col-md-4 control-label">Nationality</label>
-
-                        <div class="col-md-2">
-                            <input type="text" class="form-control"  name="nationality" />
-                        </div> 
-                        <label for="email" class="col-md-2 control-label">NID</label>
-
-                        <div class="col-md-2">
-                            <input type="number" class="form-control"  name="nid" />
-
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="email" class="col-md-4 control-label">Age</label>
-
-                        <div class="col-md-2">
-                            <input type="number" class="form-control"  name="age" />
-                        </div> 
-                        <label for="email" class="col-md-2 control-label">Profile Visible</label>
-
-                        <div class="col-md-2">
-                            <select name="pro_visible" class="form-control">
-                                <option value="Yes">Yes</option>
-                                <option value="No">No</option>
-                            </select>
-
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="email" class="col-md-4 control-label">Latitude</label>
-
-                        <div class="col-md-2">
-                            <input type="text" class="form-control"  name="latitude" />
-                        </div> 
-                        <label for="email" class="col-md-2 control-label">Longitude</label>
-
-                        <div class="col-md-2">
-                            <input type="text" class="form-control"  name="longitude" />
-
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="email" class="col-md-4 control-label">Last Latitude</label>
-
-                        <div class="col-md-2">
-                            <input type="text" class="form-control"  name="lastLat" />
-                        </div> 
-                        <label for="email" class="col-md-2 control-label">Last Longitude</label>
-
-                        <div class="col-md-2">
-                            <input type="text" class="form-control"  name="lastLng" />
-
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email" class="col-md-4 control-label">Rank</label>
-
-                        <div class="col-md-2">
-
-                            <input id="password" type="text" class="form-control" name="rank" >
-                        </div> 
-                        <label for="email" class="col-md-2 control-label">Status</label>
-
-                        <div class="col-md-2">
-                            <input type="text" class="form-control"  name="status" />
-
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-4 control-label">Number of Donate</label>
+                        <label for="name" class="col-md-4 control-label">Gender</label>
                         <div class="col-md-6">
-                            <input type="number" class="form-control"  name="number_of_donate" />
+                            <input id="name" type="radio" name="gender" value="male" >Male &nbsp;&nbsp;&nbsp;
+                            <input id="name" type="radio" name="gender" value="female" >Female
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-md-4 control-label">Profile Photo</label>
+                        <div class="col-md-6">
+                            <input id="name" type="file" class="form-control" name="profile_photo"  autofocus>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-md-4 control-label">Preasent Address</label>
+                        <div class="col-md-6">
+                            <textarea name="preasent_address" class="form-control"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-md-4 control-label">Chamber Address</label>
+                        <div class="col-md-6">
+                            <textarea name="chamber_address" class="form-control"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-md-4 control-label">Doctor Detail</label>
+                        <div class="col-md-6">
+                            <textarea name="doctor_detail" class="form-control"></textarea>
                         </div>
                     </div>
                     <div class="form-group">
