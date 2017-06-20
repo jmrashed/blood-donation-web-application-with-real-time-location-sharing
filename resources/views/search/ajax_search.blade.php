@@ -32,11 +32,13 @@
                                 </div>
                                 <div class="col-md-2">
                                     <select name="district" id="districts" class="districts form-control"> 
+                                        <option value="0">Any district</option>
                                     </select>
 
                                 </div>
                                 <div class="col-md-2">
                                     <select name="upazila" id="upazillas" class="form-control"> 
+                                        <option value="0">Any upazila</option>
                                     </select>
 
                                 </div>
