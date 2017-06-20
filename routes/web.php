@@ -79,6 +79,11 @@ Route::get('/donor/{id}/edit', 'DonorController@edit');
 Route::post('/donor/update', 'DonorController@update');
 Route::any('/donor/{id}/destroy', 'DonorController@destroy');
 
+//------------------Doctor----------------------------------
+Route::get('admin/doctor/view', 'DoctorController@view');
+Route::get('admin/doctor/create', 'DoctorController@create');
+
+
 
 
 //---------------------Search -------------------------------
