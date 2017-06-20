@@ -4,21 +4,6 @@
 @section('content')
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
-
-
-    <?php
-    //   if (isset($_GET['type'])) {
-    //   if ($_GET['type'] == "add") {
-    ?>
-    <!-- Main content -->
-
-    <!-- /.content -->
-
-    <?php
-    // }
-    //}if (isset($_GET['type'])) {
-    //  if ($_GET['type'] == "view") {
-    ?>
     <!-- Main content -->
     <section class="content">
         <div class="row">

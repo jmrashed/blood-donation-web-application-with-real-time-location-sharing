@@ -99,6 +99,14 @@ Route::get('/content/store', 'ContentController@store')->name('store');
 Route::post('/content/update', 'ContentController@update');
 Route::any('/content/{id}/destroy', 'ContentController@destroy');
 
+//-------------------Blog-----------------------------
+Route::any('/blog/category', 'BlogController@blog_category');
+Route::any('/blog/createCategory', 'BlogController@create_category');
+Route::any('/blog/saveCategory', 'BlogController@save_category');
+Route::any('/blog/content', 'BlogController@view_blog');
+Route::any('/blog/create', 'BlogController@create_blog');
+Route::any('/blog/saveBlog', 'BlogController@save_blog');
+
 
 
 
