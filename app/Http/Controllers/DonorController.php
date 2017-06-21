@@ -151,6 +151,7 @@ class DonorController extends Controller {
         $post_district = $request->district;
         $post_upazila = $request->upazila;
         //dd($post_blood_group);
+        
         if ($post_division == 0 && $post_blood_group == '0') {
             $str = "SELECT * FROM donors"; 
         } elseif ($post_division == 0 && $post_blood_group != '0') {
@@ -162,7 +163,6 @@ class DonorController extends Controller {
              $str = "SELECT * FROM donors  WHERE";
         }
 
-    //dd($str);
         if ($request->division != 0) {
             if (isset($request->division)) {
                 $str .= "  division_id=" . $request->division;
@@ -175,7 +175,6 @@ class DonorController extends Controller {
             }
         }
 
-   //dd($str);
         $data['result'] = DB::select($str);
         return view('search.ajax_search')->with('data', $data);
     }

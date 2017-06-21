@@ -12,7 +12,7 @@ class SearchController extends Controller
 {
       public function index(){
         $data['division'] = Division::all();
-    	return view('search.ajax_search')->with('data', $data);;
+    	return view('search.ajax_search')->with('data', $data);
     }
 
     public function DonorSearchByLocation(){

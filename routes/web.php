@@ -82,8 +82,25 @@ Route::any('/donor/{id}/destroy', 'DonorController@destroy');
 //------------------Doctor----------------------------------
 Route::get('admin/doctor/view', 'DoctorController@view');
 Route::get('admin/doctor/create', 'DoctorController@create');
+Route::post('admin/doctor/store', 'DoctorController@store');
+Route::get('admin/doctor/search_view', 'DoctorController@search_view');
+Route::post('admin/doctor/search', 'DoctorController@search');
 
+//-------------------------Hospital------------------------
+Route::get('admin/hospital/view_hospital', 'DoctorController@hospital_view');
+Route::get('admin/hospital/create_hospital', 'DoctorController@hospital_create');
+Route::any('admin/hospital/hospital_store', 'DoctorController@hospital_store');
 
+//------------------------Designation----------------------------
+Route::get('admin/designation/view_designation', 'DoctorController@designation_view');
+Route::get('admin/designation/create_designation', 'DoctorController@designation_create');
+Route::post('admin/designation/store_designation', 'DoctorController@store_designation');
+
+//--------------------------Degree---------------------------------
+
+Route::get('admin/degree/view_degree', 'DoctorController@degree_view');
+Route::get('admin/degree/create_degree', 'DoctorController@degree_create');
+Route::post('admin/degree/store_degree', 'DoctorController@degree_store');
 
 
 //---------------------Search -------------------------------
