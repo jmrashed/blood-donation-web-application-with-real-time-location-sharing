@@ -13,7 +13,10 @@ use DB;
 
 class DoctorController extends Controller
 {
-    //
+      public function __construct() {
+       $this->middleware('auth');
+    }
+
     public function view(){
         $data['doctor'] = Doctor::all();
         return view('doctor.view')->with('data', $data);
@@ -114,5 +117,22 @@ class DoctorController extends Controller
     public function hospital_view(){
         $data['hospital'] = Hospital::all();
         return view('hospital.view')->with('data', $data);
+    }
+    
+    public function hospital_create(){
+        return view('hospital.create');
+    }
+
+    public function hospital_store(Request $request){
+        $Hospital = new Hospital;
+       // $data['hospital'] = Hospital::all(); 
+        //dd($data['hospital']);
+        $Hospital->hospital_name->$request->hospital_name;
+        $Hospital->location->$request->location;
+        $Hospital->phone->$request->phone;
+        $Hospital->incharge_name->$request->incharge_name;
+        $Hospital->details->$request->details;
+        $Hospital->save();
+        return redirect('/admin/hospital/view_hospital');
     }
 }

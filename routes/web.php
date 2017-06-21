@@ -88,7 +88,8 @@ Route::post('admin/doctor/search', 'DoctorController@search');
 
 //-------------------------Hospital------------------------
 Route::get('admin/hospital/view_hospital', 'DoctorController@hospital_view');
-Route::get('admin/hospital/add_hospital', 'DoctorController@search');
+Route::get('admin/hospital/create_hospital', 'DoctorController@hospital_create');
+Route::any('admin/hospital/hospital_store', 'DoctorController@hospital_store');
 
 
 
