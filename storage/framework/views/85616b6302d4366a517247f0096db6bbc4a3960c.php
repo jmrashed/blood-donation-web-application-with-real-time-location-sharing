@@ -41,11 +41,11 @@
                                     <td><?php echo e($row->id); ?></td>
                                     <td><?php echo e($row->name); ?></td>
                                     <td><?php echo e($row->designation); ?></td> 
-                                    <td><?php echo e($row->hospital); ?></td> 
-                                    <td><?php echo e($row->phone); ?></td> 
-                                    <td><?php echo e($row->speacilist); ?></td> 
-                                    <td><?php echo e($row->location); ?></td> 
-                                    <td><?php echo e($row->chamber); ?></td> 
+                                    <td><?php echo e($row->hospital); ?></td>
+                                    <td><?php echo e($row->speacilist); ?></td>
+                                    <td><?php echo e($row->phone); ?></td>
+                                    <td><?php echo e($row->preasent_address); ?></td> 
+                                    <td><?php echo e($row->chamber_address); ?></td> 
                                     <td> 
                                         <a href="<?php echo e(url('/donor')); ?>/<?php echo e($row->id); ?>/edit" class="btn btn-primary btn-xs"><i class="fa fa-fw fa-edit"></i> </a>
                                         <a href="<?php echo e(url('/donor')); ?>/<?php echo e($row->id); ?>/destroy" class="btn  btn-danger btn-xs"><i class="fa fa-fw fa-remove"></i></a>

@@ -44,11 +44,11 @@
                                     <td>{{$row->id}}</td>
                                     <td>{{$row->name}}</td>
                                     <td>{{$row->designation}}</td> 
-                                    <td>{{$row->hospital}}</td> 
-                                    <td>{{$row->phone}}</td> 
-                                    <td>{{$row->speacilist}}</td> 
-                                    <td>{{$row->location}}</td> 
-                                    <td>{{$row->chamber}}</td> 
+                                    <td>{{$row->hospital}}</td>
+                                    <td>{{$row->speacilist}}</td>
+                                    <td>{{$row->phone}}</td>
+                                    <td>{{$row->preasent_address}}</td> 
+                                    <td>{{$row->chamber_address}}</td> 
                                     <td> 
                                         <a href="{{url('/donor')}}/{{$row->id}}/edit" class="btn btn-primary btn-xs"><i class="fa fa-fw fa-edit"></i> </a>
                                         <a href="{{url('/donor')}}/{{$row->id}}/destroy" class="btn  btn-danger btn-xs"><i class="fa fa-fw fa-remove"></i></a>

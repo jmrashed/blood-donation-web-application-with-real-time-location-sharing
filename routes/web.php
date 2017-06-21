@@ -83,6 +83,8 @@ Route::any('/donor/{id}/destroy', 'DonorController@destroy');
 Route::get('admin/doctor/view', 'DoctorController@view');
 Route::get('admin/doctor/create', 'DoctorController@create');
 Route::post('admin/doctor/store', 'DoctorController@store');
+Route::get('admin/doctor/search_view', 'DoctorController@search_view');
+Route::get('admin/doctor/search', 'DoctorController@search');
 
 
 

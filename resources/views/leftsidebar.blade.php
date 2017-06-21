@@ -77,7 +77,7 @@
                 </a>
                 <ul class="treeview-menu" style="display: none;">
                     <li><a href="{{url('/')}}/admin/doctor/view"><i class="fa fa-circle-o"></i> Doctors</a></li>
-                    <li><a href="{{url('/blog/content')}}"><i class="fa fa-circle-o"></i> Search Doctors</a></li>
+                    <li><a href="{{url('/admin/doctor/search_view')}}"><i class="fa fa-circle-o"></i> Search Doctors</a></li>
                 </ul>
             </li>
             <li class="treeview">
