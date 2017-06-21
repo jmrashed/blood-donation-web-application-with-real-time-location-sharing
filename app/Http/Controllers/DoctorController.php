@@ -7,8 +7,9 @@ use App\Http\Controllers\Controller;
 use App\Doctor;
 use App\Doctor_designation;
 use App\Hospital;
-use App\Doctor_specialitie;
+use App\Doctor_speciality;
 use App\Libraries\Common;
+use DB;
 
 class DoctorController extends Controller
 {
@@ -52,17 +53,21 @@ class DoctorController extends Controller
     
     public function search_view(){
         $data['hospital'] = Hospital::all(); 
-        $data['specility'] = Doctor_specialitie::all();
+        $data['specility'] = Doctor_speciality::all();
         $data['location'] = Doctor::all();
     	return view('doctor.search')->with('data', $data);
     }
     
     public function search(Request $request){
         //$doctor = new Doctor;
+        
+        $data['hospital'] = Hospital::all(); 
+        $data['specility'] = Doctor_speciality::all();
+        $data['location'] = Doctor::all();
         $hospital=$request->hospital;
         $specialist=$request->speacilist;
         $location=$request->preasent_address;
-        
+        /*
         if ($hospital == 0 && $specialist == 0 && $location='0') {
             $str = "SELECT * FROM doctors"; 
         } elseif ($hospital == 0 && $specialist == 0 && $location!='0') {
@@ -98,10 +103,16 @@ class DoctorController extends Controller
                 $str .= " AND upazila=" . $request->upazila;
             }
         }
+         
+         */
+        
+        $sql="SELECT * FROM doctors WHERE hospital='$hospital' AND speacilist='$specialist' AND present_address='$location' ";
+        $data['result'] = DB::select($sql);
+        return view('doctor.search')->with('data', $data);
     }
     
     public function hospital_view(){
         $data['hospital'] = Hospital::all();
-        return view('doctor.view')->with('data', $data);
+        return view('hospital.view')->with('data', $data);
     }
 }

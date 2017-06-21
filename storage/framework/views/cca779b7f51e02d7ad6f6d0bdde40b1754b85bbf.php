@@ -16,7 +16,7 @@
                     </div>
                     <div class="box-body">
 
-                        <form action="/admin/donor/search" method="post">
+                        <form action="<?php echo e(url('/')); ?>/admin/doctor/search" method="post">
                             <?php echo csrf_field(); ?>
 
                             <div class="form-group">
@@ -85,8 +85,17 @@
                                     <th>Operation</th>
                                 </tr>
                             </thead>
+                            
                             <tbody> 
-                                
+                                <tr>
+                                    <th>
+                                        <?php if(isset($data['result'])): ?>
+                                <?php $__currentLoopData = $data['result']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $row): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <?php echo e($row->name); ?>  
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                    <?php endif; ?>
+                                 </th>
+                                </tr>
                             </tbody>
 
                         </table>

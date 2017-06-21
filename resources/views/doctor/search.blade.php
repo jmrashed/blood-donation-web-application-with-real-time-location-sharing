@@ -19,7 +19,7 @@
                     </div>
                     <div class="box-body">
 
-                        <form action="/admin/donor/search" method="post">
+                        <form action="{{url('/')}}/admin/doctor/search" method="post">
                             {!! csrf_field() !!}
                             <div class="form-group">
                                 <div class="col-md-3">
@@ -87,8 +87,17 @@
                                     <th>Operation</th>
                                 </tr>
                             </thead>
+                            
                             <tbody> 
-                                
+                                <tr>
+                                    <th>
+                                        @if(isset($data['result']))
+                                @foreach($data['result'] as $row)
+                                    {{$row->name}}  
+                                    @endforeach
+                                    @endif
+                                 </th>
+                                </tr>
                             </tbody>
 
                         </table>
