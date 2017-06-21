@@ -81,6 +81,12 @@
                 </ul>
             </li>
             <li class="treeview">
+                <a href="{{ url('/admin/hospital/view_hospital') }}">
+                    <i class="fa fa-users"></i>
+                    <span>Manage Hospital</span>
+                </a>
+            </li>
+            <li class="treeview">
                 <a href="{{ url('/content') }}">
                     <i class="fa fa-tasks"></i>
                     <span>Content</span>

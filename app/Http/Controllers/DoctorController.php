@@ -99,4 +99,9 @@ class DoctorController extends Controller
             }
         }
     }
+    
+    public function hospital_view(){
+        $data['hospital'] = Hospital::all();
+        return view('doctor.view')->with('data', $data);
+    }
 }
