@@ -87,6 +87,18 @@
                 </a>
             </li>
             <li class="treeview">
+                <a href="<?php echo e(url('/admin/designation/view_designation')); ?>">
+                    <i class="fa fa-users"></i>
+                    <span>Manage Designation</span>
+                </a>
+            </li>
+            <li class="treeview">
+                <a href="<?php echo e(url('/admin/degree/view_degree')); ?>">
+                    <i class="fa fa-users"></i>
+                    <span>Manage Degrees</span>
+                </a>
+            </li>
+            <li class="treeview">
                 <a href="<?php echo e(url('/content')); ?>">
                     <i class="fa fa-tasks"></i>
                     <span>Content</span>

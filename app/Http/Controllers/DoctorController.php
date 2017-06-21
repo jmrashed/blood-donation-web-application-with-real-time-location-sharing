@@ -8,6 +8,7 @@ use App\Doctor;
 use App\Doctor_designation;
 use App\Hospital;
 use App\Doctor_speciality;
+use App\doctor_degree;
 use App\Libraries\Common;
 use DB;
 
@@ -134,5 +135,36 @@ class DoctorController extends Controller
         $Hospital->details->$request->details;
         $Hospital->save();
         return redirect('/admin/hospital/view_hospital');
+    }
+    
+    public function designation_view(){
+        $data['designation'] = Doctor_designation::all();
+        return view('designation.view')->with('data', $data);
+    }
+    
+    public function designation_create(){
+        return view('designation.create');
+    }
+    
+    public function store_designation(Request $request){
+        $designation = new Doctor_designation;
+        $designation->name->$request->name;
+        $designation->save();
+        return redirect('/admin/designation/view_designation');
+    }
+    public function degree_view(){
+        $data['degree'] = doctor_degree::all();
+        return view('degree.view')->with('data', $data);
+    }
+    
+    public function degree_create(){
+        return view('degree.create');
+    }
+    
+    public function store_degree(Request $request){
+        $designation = new Doctor_designation;
+        $designation->name->$request->name;
+        $designation->save();
+        return redirect('/admin/designation/view_designation');
     }
 }
