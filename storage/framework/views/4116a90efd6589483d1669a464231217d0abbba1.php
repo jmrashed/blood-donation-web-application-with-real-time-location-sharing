@@ -77,14 +77,21 @@
 
             <div class="box-body">
                 <!-- form start -->
-                <form class="form-horizontal" action="<?php echo e(url('/admin/designation/store_designation')); ?>" method="post"> 
+                <form class="form-horizontal" action="<?php echo e(url('/admin/degree/store_degree')); ?>" method="post"> 
                     <?php echo csrf_field(); ?>
 
 
                     <div class="form-group">
+                        <label for="name" class="col-md-4 control-label">ABBR Name</label>
+                        <div class="col-md-6">
+                            <input id="name" type="text" class="form-control" name="abbr"  autofocus>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
                         <label for="name" class="col-md-4 control-label">Degree Name</label>
                         <div class="col-md-6">
-                            <input id="name" type="text" class="form-control" name="name"  autofocus>
+                            <input id="name" type="text" class="form-control" name="degree"  autofocus>
                         </div>
                     </div>
                     <div class="form-group">

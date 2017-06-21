@@ -72,7 +72,7 @@
                 <h3 class="box-title">New designation </h3>
 
                 <div class="box-tools pull-right">
-                    <a href="{{url('/admin/doctor/view')}}" class="">      
+                    <a href="{{url('/admin/designation/view')}}" class="">      
                         <i class="fa fa-undo" aria-hidden="true"></i> back
                     </a>
 

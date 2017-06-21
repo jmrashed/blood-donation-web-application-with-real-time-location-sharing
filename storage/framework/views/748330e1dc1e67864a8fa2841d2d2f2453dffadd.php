@@ -67,37 +67,52 @@
                     <li><a href="<?php echo e(url('/blog/content')); ?>"><i class="fa fa-circle-o"></i> Content</a></li>
                 </ul>
             </li>
+
             <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-rss" aria-hidden="true"></i>
-                    <span>Manage Doctor</span>
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                    <span>Health</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
-                <ul class="treeview-menu" style="display: none;">
-                    <li><a href="<?php echo e(url('/')); ?>/admin/doctor/view"><i class="fa fa-circle-o"></i> Doctors</a></li>
-                    <li><a href="<?php echo e(url('/admin/doctor/search_view')); ?>"><i class="fa fa-circle-o"></i> Search Doctors</a></li>
+                <ul class="treeview-menu" style="display: none;"> 
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-rss" aria-hidden="true"></i>
+                            <span>Manage Doctor</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu" style="display: none;">
+                            <li><a href="<?php echo e(url('/')); ?>/admin/doctor/view"><i class="fa fa-circle-o"></i> Doctors</a></li>
+                            <li><a href="<?php echo e(url('/admin/doctor/search_view')); ?>"><i class="fa fa-circle-o"></i> Search Doctors</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="<?php echo e(url('/admin/hospital/view_hospital')); ?>">
+                            <i class="fa fa-users"></i>
+                            <span>Manage Hospital</span>
+                        </a>
+                    </li>
+                    <li class="treeview">
+                        <a href="<?php echo e(url('/admin/designation/view_designation')); ?>">
+                            <i class="fa fa-users"></i>
+                            <span>Manage Designation</span>
+                        </a>
+                    </li>
+                    <li class="treeview">
+                        <a href="<?php echo e(url('/admin/degree/view_degree')); ?>">
+                            <i class="fa fa-users"></i>
+                            <span>Manage Degrees</span>
+                        </a>
+                    </li>
+
                 </ul>
             </li>
-            <li class="treeview">
-                <a href="<?php echo e(url('/admin/hospital/view_hospital')); ?>">
-                    <i class="fa fa-users"></i>
-                    <span>Manage Hospital</span>
-                </a>
-            </li>
-            <li class="treeview">
-                <a href="<?php echo e(url('/admin/designation/view_designation')); ?>">
-                    <i class="fa fa-users"></i>
-                    <span>Manage Designation</span>
-                </a>
-            </li>
-            <li class="treeview">
-                <a href="<?php echo e(url('/admin/degree/view_degree')); ?>">
-                    <i class="fa fa-users"></i>
-                    <span>Manage Degrees</span>
-                </a>
-            </li>
+
+
             <li class="treeview">
                 <a href="<?php echo e(url('/content')); ?>">
                     <i class="fa fa-tasks"></i>

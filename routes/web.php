@@ -100,7 +100,7 @@ Route::post('admin/designation/store_designation', 'DoctorController@store_desig
 
 Route::get('admin/degree/view_degree', 'DoctorController@degree_view');
 Route::get('admin/degree/create_degree', 'DoctorController@degree_create');
-Route::get('admin/degree/store_degree', 'DoctorController@store_create');
+Route::post('admin/degree/store_degree', 'DoctorController@degree_store');
 
 
 //---------------------Search -------------------------------

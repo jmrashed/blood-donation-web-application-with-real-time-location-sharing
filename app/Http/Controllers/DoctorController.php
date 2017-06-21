@@ -128,11 +128,11 @@ class DoctorController extends Controller
         $Hospital = new Hospital;
        // $data['hospital'] = Hospital::all(); 
         //dd($data['hospital']);
-        $Hospital->hospital_name->$request->hospital_name;
-        $Hospital->location->$request->location;
-        $Hospital->phone->$request->phone;
-        $Hospital->incharge_name->$request->incharge_name;
-        $Hospital->details->$request->details;
+        $Hospital->hospital_name = $request->hospital_name;
+        $Hospital->location = $request->location;
+        $Hospital->phone = $request->phone;
+        $Hospital->incharge_name = $request->incharge_name;
+        $Hospital->details = $request->details;
         $Hospital->save();
         return redirect('/admin/hospital/view_hospital');
     }
@@ -148,7 +148,7 @@ class DoctorController extends Controller
     
     public function store_designation(Request $request){
         $designation = new Doctor_designation;
-        $designation->name->$request->name;
+        $designation->name=$request->name;
         $designation->save();
         return redirect('/admin/designation/view_designation');
     }
@@ -161,10 +161,11 @@ class DoctorController extends Controller
         return view('degree.create');
     }
     
-    public function store_degree(Request $request){
-        $designation = new Doctor_designation;
-        $designation->name->$request->name;
-        $designation->save();
-        return redirect('/admin/designation/view_designation');
+    public function degree_store(Request $request){
+        $degree = new doctor_degree;
+        $degree->abbr=$request->abbr;
+        $degree->degree=$request->degree;
+        $degree->save();
+        return redirect('/admin/degree/view_degree');
     }
 }
