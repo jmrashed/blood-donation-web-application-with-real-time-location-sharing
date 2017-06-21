@@ -68,6 +68,19 @@
                 </ul>
             </li>
             <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-rss" aria-hidden="true"></i>
+                    <span>Manage Doctor</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu" style="display: none;">
+                    <li><a href="<?php echo e(url('/')); ?>/admin/doctor/view"><i class="fa fa-circle-o"></i> Doctors</a></li>
+                    <li><a href="<?php echo e(url('/blog/content')); ?>"><i class="fa fa-circle-o"></i> Search Doctors</a></li>
+                </ul>
+            </li>
+            <li class="treeview">
                 <a href="<?php echo e(url('/content')); ?>">
                     <i class="fa fa-tasks"></i>
                     <span>Content</span>
