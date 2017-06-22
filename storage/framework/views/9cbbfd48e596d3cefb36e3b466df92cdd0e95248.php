@@ -1,7 +1,4 @@
-@extends('layouts.myapp')
-
-
-@section('content')
+<?php $__env->startSection('content'); ?>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
 
@@ -14,7 +11,7 @@
                 <h3 class="box-title"> </h3>
 
                 <div class="box-tools pull-right">
-                    <a href="{{url('/blog/category')}}" class="">      
+                    <a href="<?php echo e(url('/blog/category')); ?>" class="">      
                         <i class="fa fa-undo" aria-hidden="true"></i> back
                     </a>
 
@@ -27,8 +24,9 @@
                     </div>
                     <div class="box-body">
                         <!-- form start -->
-                        <form class="form-horizontal" action="{{url('/blog/saveCategory')}}" method="post">
-                        {!! csrf_field() !!}
+                        <form class="form-horizontal" action="<?php echo e(url('/blog/saveCategory')); ?>" method="post">
+                        <?php echo csrf_field(); ?>
+
 
                         <div class="form-group">
                             <label for="name" class="col-md-4 control-label">Category Name</label>
@@ -56,4 +54,5 @@
 
 </div>
 <!-- /.content-wrapper -->
-@endsection 
+<?php $__env->stopSection(); ?> 
+<?php echo $__env->make('layouts.myapp', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

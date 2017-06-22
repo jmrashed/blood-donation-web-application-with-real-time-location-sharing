@@ -24,18 +24,14 @@
                     </div>
                     <div class="box-body">
                         <!-- form start -->
-                        <form action="<?php echo e(url('/blog/saveBlog')); ?>" method="post" enctype="multipart/form-data">
-                            <?php echo csrf_field(); ?>
-
-
+                        <form class="form-horizontal" action="<?php echo e(url('/blog/saveBlog')); ?>" method="post" enctype="multipart/form-data">
+                            <?php echo csrf_field(); ?> 
                             <div class="form-group">
                                 <label for="name" class="col-md-2 control-label">Category</label>
-
-                                <div class="col-md-4">
+                                <div class="col-md-10">
                                     <select name="blog_category_id" class="form-control">
                                         <option value="">-- Select Category --</option>
                                         <?php $__currentLoopData = $data['category_list']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $row): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-
                                         <option value="<?php echo e($row->id); ?>"> <?php echo e($row->category_name); ?>  </option>
                                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                     </select>
@@ -45,24 +41,21 @@
                             <div class="form-group">
                                 <label for="name" class="col-md-2 control-label">Title</label>
 
-                                <div class="col-md-4">
+                                <div class="col-md-10">
                                     <input id="name" type="text" class="form-control" name="title" required autofocus>
-
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="name" class="col-md-2 control-label">Description</label>
-
-                                <div class="col-md-4">
-                                    <input id="name" type="text" class="form-control" name="description" required autofocus>
-
+                                <div class="col-md-10">
+                                    <textarea class="form-control" name="description"></textarea>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="name" class="col-md-2 control-label">Image</label>
+                                <label for="name" class="col-md-2 control-label">Image Upload</label>
 
-                                <div class="col-md-4">
-                                    <input id="name" type="file" class="form-control" name="image" required autofocus>
+                                <div class="col-md-10">
+                                    <input id="name" type="file"   name="image" required autofocus>
 
                                 </div>
                             </div>

@@ -27,17 +27,14 @@
                     </div>
                     <div class="box-body">
                         <!-- form start -->
-                        <form action="{{url('/blog/saveBlog')}}" method="post" enctype="multipart/form-data">
-                            {!! csrf_field() !!}
-
+                        <form class="form-horizontal" action="{{url('/blog/saveBlog')}}" method="post" enctype="multipart/form-data">
+                            {!! csrf_field() !!} 
                             <div class="form-group">
                                 <label for="name" class="col-md-2 control-label">Category</label>
-
-                                <div class="col-md-4">
+                                <div class="col-md-10">
                                     <select name="blog_category_id" class="form-control">
                                         <option value="">-- Select Category --</option>
                                         @foreach($data['category_list'] as $row)
-
                                         <option value="{{$row->id}}"> {{$row->category_name}}  </option>
                                         @endforeach
                                     </select>
@@ -47,24 +44,21 @@
                             <div class="form-group">
                                 <label for="name" class="col-md-2 control-label">Title</label>
 
-                                <div class="col-md-4">
+                                <div class="col-md-10">
                                     <input id="name" type="text" class="form-control" name="title" required autofocus>
-
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="name" class="col-md-2 control-label">Description</label>
-
-                                <div class="col-md-4">
-                                    <input id="name" type="text" class="form-control" name="description" required autofocus>
-
+                                <div class="col-md-10">
+                                    <textarea class="form-control" name="description"></textarea>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="name" class="col-md-2 control-label">Image</label>
+                                <label for="name" class="col-md-2 control-label">Image Upload</label>
 
-                                <div class="col-md-4">
-                                    <input id="name" type="file" class="form-control" name="image" required autofocus>
+                                <div class="col-md-10">
+                                    <input id="name" type="file"   name="image" required autofocus>
 
                                 </div>
                             </div>
