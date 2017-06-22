@@ -102,8 +102,12 @@ Route::get('admin/degree/view_degree', 'DoctorController@degree_view');
 Route::get('admin/degree/create_degree', 'DoctorController@degree_create');
 Route::post('admin/degree/store_degree', 'DoctorController@degree_store');
 
+//-------------------------Blood Request-----------------------------
+Route::get('/bloodrequest', 'DonorController@blood_request_view');
+Route::get('/bloodrequest/create', 'DonorController@blood_request_create');
+Route::post('/bloodrequest/store', 'DonorController@blood_request_store');
 
-//---------------------Search -------------------------------
+//------------------------------Search -------------------------------
 /*
 Route::get('/search', 'HomeController@search');
 Route::get('/search/ajax', 'HomeController@ajax');

@@ -34,11 +34,20 @@
                 </a>
             </li>
             <li class="treeview">
-                <a href="<?php echo e(url('/donor')); ?>">
-                    <i class="fa fa-users"></i>
-                    <span>Donor</span>
+                <a href="#">
+                    <i class="fa fa-rss" aria-hidden="true"></i>
+                    <span>Blood Donor</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
                 </a>
-            </li> 
+                <ul class="treeview-menu" style="display: none;">
+                    
+                    <li><a href="<?php echo e(url('/donor')); ?>"><i class="fa fa-circle-o"></i> Donor</a></li>
+                    <li><a href="<?php echo e(url('/search')); ?>"><i class="fa fa-circle-o"></i> Search</a></li>
+                    <li><a href="<?php echo e(url('/bloodrequest')); ?>"><i class="fa fa-circle-o"></i> Blood Request</a></li>
+                </ul>
+            </li>
             <li class="treeview">
                 <a href="#">
                     <i class="fa fa-pie-chart"></i>
@@ -117,14 +126,6 @@
                 <a href="<?php echo e(url('/content')); ?>">
                     <i class="fa fa-tasks"></i>
                     <span>Content</span>
-                </a>
-            </li>
-
-
-            <li class="treeview">
-                <a href="<?php echo e(url('/search')); ?>">
-                    <i class="fa fa-search"></i>
-                    <span>Search</span>
                 </a>
             </li>
             <li class="treeview">
