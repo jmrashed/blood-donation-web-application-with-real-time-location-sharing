@@ -2,14 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/xampp/htdocs/Lifecycle/resources/views/designation/create.blade.php</file>
-            <file>file:/C:/xampp/htdocs/Lifecycle/resources/views/degree/create.blade.php</file>
-            <file>file:/C:/xampp/htdocs/Lifecycle/routes/web.php</file>
-            <file>file:/C:/xampp/htdocs/Lifecycle/resources/views/designation/view.blade.php</file>
-            <file>file:/C:/xampp/htdocs/Lifecycle/resources/views/degree/view.blade.php</file>
-            <file>file:/C:/xampp/htdocs/Lifecycle/resources/views/leftsidebar.blade.php</file>
-            <file>file:/C:/xampp/htdocs/Lifecycle/app/Http/Controllers/DoctorController.php</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
