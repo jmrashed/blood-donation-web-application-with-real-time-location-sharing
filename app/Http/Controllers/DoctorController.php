@@ -26,7 +26,7 @@ class DoctorController extends Controller
     public function create(){
         $data['designation'] = Doctor_designation::all();
         $data['hospital'] = Hospital::all(); 
-        $data['specility'] = Doctor_specialitie::all();
+        $data['specility'] = Doctor_speciality::all();
         return view('doctor.create')->with('data', $data);
     }
     public function store(Request $request){

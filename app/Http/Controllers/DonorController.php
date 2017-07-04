@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Division;
 use App\District;
 use App\Upazila;
+use App\BloodRequest;
 use App\Libraries\Common;
 use DB;
 
@@ -184,6 +185,29 @@ class DonorController extends Controller {
         $donor = new Donor;
         $data['donor_single'] = $donor->where('id', $id)->get();
         return view('search.viewprofile')->with('data', $data);
+    }
+    
+    public function blood_request_view(){
+        $data['request_list']= BloodRequest::all();
+        return view('bloodrequest.view')->with('data',$data);
+        
+    }
+    public function blood_request_create(){
+        return view('bloodrequest.create');
+    }
+    public function blood_request_store(Request $request){
+        $data =new BloodRequest;
+        $data->user_id=$request->user_id;
+        $data->request_blood_group=$request->request_blood_group;
+        $data->patient_name=$request->patient_name;
+        $data->patient_phone=$request->patient_phone;
+        $data->patient_place=$request->patient_place;
+        $data->number_blood_bag=$request->number_blood_bag;
+        $data->disease=$request->disease;
+        $data->relation=$request->relation;
+        $data->opration_time=$request->operation_time;
+        $data->save();
+        return redirect('/bloodrequest');
     }
 
 }
