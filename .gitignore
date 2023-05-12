@@ -1,0 +1,31 @@
+# Laravel specific
+.env
+.env.backup
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+public/storage
+
+# Composer related
+vendor/
+composer.lock
+
+# IDEs and Editors
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.phar
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs and backups
+*.log
+*.log.*
+*.zip
+*.gz
+*.sql
