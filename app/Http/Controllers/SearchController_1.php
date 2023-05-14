@@ -8,7 +8,7 @@ use App\Division;
 use App\District;
 use App\Upazila;
 use App\Libraries\Common;
-class SearchController extends Controller
+class SearchController_1 extends Controller
 {
     public function index(){
         $data['division'] = Division::all();

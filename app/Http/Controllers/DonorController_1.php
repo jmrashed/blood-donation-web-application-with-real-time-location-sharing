@@ -10,7 +10,7 @@ use App\Upazila;
 use App\Libraries\Common;
 use DB;
 
-class DonorController extends Controller {
+class DonorController_1 extends Controller {
 
     public function index() {
         $data['division'] = Division::all();
