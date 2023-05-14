@@ -26,7 +26,7 @@
                                         <ul class="event-held pl-0 list-inline">
                                             <li data-text-color="#777"> <i class="fa fa-map-marker"></i> <a href="">  ঢাকা মেডিক্যাল কলেজ  </a> </li>
                                             <li data-text-color="#777"> <i class="fa fa-phone"></i> <a href="">   ০১৭৩৪৪৪৬৫১৪  </a> </li>
-                                            <li data-text-color="#777"> <i class="fa fa-envelope-o"></i> <a href="">   info@gmail.com </a> </li>
+                                            <li data-text-color="#777"> <i class="fa fa-envelope-o"></i> <a href="">   jmrashed@gmail.com </a> </li>
                                             <li data-text-color="#777"> <i class="fa fa-user"></i> <a href="">  প্রফাইল দেখুন  </a> </li>
                                         </ul> 
                                     </div>
@@ -97,7 +97,7 @@
                                         <ul class="event-held pl-0">
                                             <li data-text-color="#777"> <i class="fa fa-map-marker"></i> <a href="">  ঢাকা মেডিক্যাল কলেজ  </a> </li>
                                             <li data-text-color="#777"> <i class="fa fa-phone"></i> <a href="">   ০১৭৩৪৪৪৬৫১৪ </a> </li>
-                                            <li data-text-color="#777"> <i class="fa fa-envelope-o"></i> <a href="">   info@gmail.com </a> </li>
+                                            <li data-text-color="#777"> <i class="fa fa-envelope-o"></i> <a href="">   jmrashed@gmail.com </a> </li>
                                             <li data-text-color="#777"> <i class="fa fa-user"></i> <a href="">  প্রফাইল  </a> </li>
                                             <li data-text-color="#777"> <i class="fa fa-user"></i> <a href=""> রক্তদানের শেষ তারিখঃ ৫ অক্টো ২০১৬ </a> </li>
                                             <li data-text-color="#777"> <i class="fa fa-user"></i> <a href=""> অসুস্থতাঃ নাই   </a> </li>

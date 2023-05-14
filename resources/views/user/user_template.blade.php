@@ -30,7 +30,7 @@
                 <div class="col-xs-12 col-sm-4 col-md-4">
                     <a href="index-2.html">
                         <div class="logo">
-                                <img src="{{ asset ("public/user/images/resources/logo.png")}}" alt="Awesome Image" />
+                                <img src="{{ asset ("public/images/logo.png") }}" alt="save-life-logo" />
                         </div>  
                     </a>
                 </div>
@@ -44,7 +44,7 @@
                             </div>
                             <div class="content">
                                 <h3>EMAIL</h3>
-                                <p>info@example.com</p>
+                                <p>jmrashed@gmail.com</p>
                             </div>
                         </div>
                         <div class="single-header-info">
@@ -55,7 +55,7 @@
                             </div>
                             <div class="content">
                                 <h3>Call Now</h3>
-                                <p><b> 00 1111 2222</b></p>
+                                <p><b> +8801734446514</b></p>
                             </div>
                         </div>
                     </div>

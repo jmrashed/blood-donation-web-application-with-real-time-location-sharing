@@ -663,9 +663,7 @@ blockquote {
 .layer-overlay.overlay-white-8::before {
     background: rgba(255, 255, 255, 0.8);
 }
-.layer-overlay.overlay-white-9::before {
-    background: rgba(224, 214, 194, 0.9);
-}
+ 
 .layer-overlay.theme-overlay::before {
     background: rgba(252,116,55, 0.9);
 }

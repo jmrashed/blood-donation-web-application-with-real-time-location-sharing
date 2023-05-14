@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <!-- responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{ $page_title or "Blood Donation" }}</title>
+        <title>{{ @$page_title or "Blood Donation" }}</title>
     <!-- responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="{{ asset("public/user/images/resources/favicon.png")}}" sizes="16x16">
@@ -24,16 +24,16 @@
         <div class="container">           
             <div class="social-icons pull-left">
                 <ul>
-                    <li><a href="mailto:info@gmail.com"> <i class="fa fa-envelope-o"> info@gmail.com </i></a></li>
-                    <li><a href="callto:8801711996655"> <i class="fa fa-phone-square"> 01711-996655 </i></a></li>
+                    <li><a href="mailto:jmrashed@gmail.com"> <i class="fa fa-envelope-o"> jmrashed@gmail.com </i></a></li>
+                    <li><a href="callto:8801711996655"> <i class="fa fa-phone-square"> +8801734446514 </i></a></li>
                 </ul>
             </div>
             <!-- /.social-icons -->
             <div class="social-icons pull-right">
                 <ul><li>
                         <form class="form-inline" action="{{url('/user/login')}}" method="post">
-                          <input type="text" class="form-control top-bar-input" name="username" placeholder="Email">  
-                          <input type="password" class="form-control top-bar-input" name="password" placeholder="Password">
+                          <input type="text" class="form-control top-bar-input" name="username" placeholder="Email" autocomplete="off">  
+                          <input type="password" class="form-control top-bar-input" name="password" placeholder="Password"  autocomplete="off">
                           <input type="submit" class="form-control top-bar-select" name="submit" value="Login">
                         </form> 
                     </li>
@@ -53,7 +53,7 @@
                 <div class="col-xs-12 col-sm-4 col-md-4">
                     <a href="{{url('/')}}">
                         <div class="logo">
-                                <img src="{{ asset ("public/user/images/resources/logo.png") }}" alt="Awesome Image" />
+                                <img src="{{ asset ("public/images/logo.png") }}" alt="save-life-logo" />
                         </div>  
                     </a>
                 </div>
@@ -67,7 +67,7 @@
                             </div>
                             <div class="content">
                                 <h3>ইমেইল </h3>
-                                <p>info@example.com</p>
+                                <p>jmrashed@gmail.com</p>
                             </div>
                         </div>
                         <div class="single-header-info">
@@ -78,7 +78,7 @@
                             </div>
                             <div class="content">
                                 <h3>  কল করুন </h3>
-                                <p><b> 00 1111 2222</b></p>
+                                <p><b> +8801734446514</b></p>
                             </div>
                         </div>
                     </div>

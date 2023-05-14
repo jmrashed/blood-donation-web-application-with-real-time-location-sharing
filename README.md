@@ -30,6 +30,8 @@ This web application is built using Laravel and allows users to find nearby bloo
 - Admins can access the admin panel at `http://localhost:8000/admin` to manage users and donations
 
 
+## Demo 
+<img src="./public/images/demo-1.png">
 
 ## Contributing
 Contributions are welcome! If you would like to contribute to this project, please follow these steps:

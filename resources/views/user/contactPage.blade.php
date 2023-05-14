@@ -54,7 +54,7 @@
                             </div>
                             <div class="content-box">
                                 <h4>Phone</h4>
-                                <p>00 1111 2222 <br>Mobile: 00 111 222 333 </p>
+                                <p>+8801734446514 <br>Mobile: 00 111 222 333 </p>
                             </div>
                         </li>
                         <li>

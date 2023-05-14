@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <!-- responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{ $page_title or "Blood Donation | user" }}</title>
+        <title>{{ @$page_title or "Blood Donation | user" }}</title>
     <!-- responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="{{ asset ("public/user/images/resources/favicon.png") }}" sizes="16x16">
@@ -582,7 +582,7 @@ opacity:0.9;
                 <div class="col-xs-12 col-sm-4 col-md-4">
                     <a href="{{url('/')}}">
                         <div class="logo">
-                                <img src="{{ asset ("public/user/images/resources/logo.png") }}" alt="Awesome Image" />
+                                <img src="{{ asset ("public/images/logo.png") }}" alt="save-life-logo" />
                         </div>  
                     </a>
                 </div>
@@ -596,7 +596,7 @@ opacity:0.9;
                             </div>
                             <div class="content">
                                 <h3>EMAIL</h3>
-                                <p>info@example.com</p>
+                                <p>jmrashed@gmail.com</p>
                             </div>
                         </div>
                         <div class="single-header-info">
@@ -607,7 +607,7 @@ opacity:0.9;
                             </div>
                             <div class="content">
                                 <h3>Call Now</h3>
-                                <p><b> 00 1111 2222</b></p>
+                                <p><b> +8801734446514</b></p>
                             </div>
                         </div>
                     </div>
@@ -958,13 +958,13 @@ opacity:0.9;
                 <div class="col-sm-6 col-md-3">
                     <div class="footer-widget about-widget">
                         <a href="index-2.html">
-                            <img src="{{ asset ("public/user/images/resources/footer-logo.png") }}" alt="Awesome Image" />
+                            <img src="{{ asset ("public/user/images/resources/footer-logo.png") }}" alt="save-life-logo" />
                         </a>
                         <ul class="contact">
                             <li><i class="fa fa-map-marker"></i> <span>00 Monroe Ave, Roseland, NJ, 07068 </span></li>
                             <li><i class="fa fa-phone"></i> <span>(973) 226-6181</span></li>
                             <li><i class="fa fa-phone"></i> <span>(973) 226-6181</span></li>
-                            <li><i class="fa fa-envelope-o"></i> <span>info@example.com</span></li>
+                            <li><i class="fa fa-envelope-o"></i> <span>jmrashed@gmail.com</span></li>
                         </ul>
                         <ul class="social">
                             <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
