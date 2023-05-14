@@ -32,6 +32,7 @@ This web application is built using Laravel and allows users to find nearby bloo
 
 ## Demo 
 <img src="./public/images/demo-1.png">
+<img src="./public/images/demo-2.png">
 
 ## Contributing
 Contributions are welcome! If you would like to contribute to this project, please follow these steps:

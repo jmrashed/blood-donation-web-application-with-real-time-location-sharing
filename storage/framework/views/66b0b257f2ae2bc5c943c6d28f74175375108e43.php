@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <!-- responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title><?php echo e(@$page_title or "Blood Donation"); ?></title>
+        <title><?php echo $__env->yieldContent('title'); ?></title>
     <!-- responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="<?php echo e(asset("public/user/images/resources/favicon.png")); ?>" sizes="16x16">

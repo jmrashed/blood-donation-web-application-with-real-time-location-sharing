@@ -1,7 +1,7 @@
 
 
 
-<?php $__env->startSection('title', 'Page Title'); ?>
+<?php $__env->startSection('title', @$data['title']); ?>
 
 
 <?php $__env->startSection('pageTitle', 'About Us'); ?>
@@ -17,7 +17,8 @@
 
         <?php $__currentLoopData = $data['post']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $row): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <h2 class="text-uppercase"> <?php echo e($row->post_title); ?></h2>
-            <p class="text-justify"> <?php $b = html_entity_decode($row->post_content); echo $b; ?> </p>
+            <p class="text-justify"> <?php $b = html_entity_decode($row->post_content);
+            echo $b; ?> </p>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </div>
 
@@ -75,11 +76,9 @@
                     </div>
                 </div>
                 <div class="col-md-6 hidden-md text-right">
-                    <img src="<?php echo e(asset ("public/user/images/resources/about-1.jpg")); ?>"
-                         alt="Serve Humanity Foundation"/>
+                    <img src="<?php echo e(asset('public/user/images/resources/about-1.jpg')); ?>" alt="Serve Humanity Foundation" />
                     <br><br>
-                    <img src="<?php echo e(asset ("public/user/images/resources/about-2.jpg")); ?>"
-                         alt="Serve Humanity Foundation"/>
+                    <img src="<?php echo e(asset('public/user/images/resources/about-2.jpg')); ?>" alt="Serve Humanity Foundation" />
                 </div>
             </div>
         </div>
@@ -104,7 +103,7 @@
     </div>
 
     <div class="fact-counter-wrapper layer-overlay overlay-white-8 parallax-section bg-parallax"
-         data-bg-img="images/bg/1.jpg">
+        data-bg-img="images/bg/1.jpg">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -163,11 +162,6 @@
         </div>
     </div>
 
-<?php $__env->stopSection(); ?> 
-
-
-
-
-
+<?php $__env->stopSection(); ?>
 
 <?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\laragon\www\bloodd\resources\views/user/aboutus.blade.php ENDPATH**/ ?>

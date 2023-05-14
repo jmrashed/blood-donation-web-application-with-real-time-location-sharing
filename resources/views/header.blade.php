@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>এডমিন প্যানেল </title>
+        <title>  {{ env('APP_NAME') }} | Save Life | Admin Panel </title>
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <!-- Bootstrap 3.3.6 -->
@@ -33,7 +33,7 @@
             <header class="main-header">
                 <!-- Logo -->
                 <a href="" class="logo"> 
-                    <span class="logo-lg"><b>এডমিন </b>প্যানেল</span>
+                    <span class="logo-lg"><b>Admin </b>Panel</span>
                 </a>
                 <!-- Header Navbar: style can be found in header.less -->
                 <nav class="navbar navbar-static-top">
@@ -53,18 +53,18 @@
                             @else
                             <li class="dropdown user user-menu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <img src="{{asset('public/AdminLTE/dist/img/user2-160x160.jpg')}}" class="user-image" alt="User Image">
+                                    <img src="{{asset('public/images/user.png')}}" class="user-image" alt="User Image">
                                     <span class="hidden-xs">{{ Auth::user()->name }}</span>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <!-- User image -->
 
                                     <li class="user-header">
-                                        <img src="{{asset('public/AdminLTE/dist/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
+                                        <img src="{{asset('public/images/user.png')}}" class="img-circle" alt="User Image">
 
                                         <p>
-                                            {{ Auth::user()->name }} - Assistant commissioner
-                                            <small>২০১৬ </small>
+                                            {{ Auth::user()->name }}  
+                                            <small>{{ date('Y') }} </small>
                                         </p>
                                     </li>
 

@@ -1,11 +1,16 @@
 <?php
 
-namespace App\models;
+namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Zizaco\Entrust\EntrustPermission;
 
 class Permission extends Model
 {
-    //
+    use HasFactory;
+    protected $fillable = [
+        'name',
+        'display_name',
+        'description',
+    ];
 }

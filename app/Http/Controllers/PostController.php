@@ -18,6 +18,7 @@ class PostController extends Controller
 
     }
     public function WhoWeAre() { 
+        $data['title'] = "About Us";
         $data['post'] = \App\Post::where('post_slug','who-we-are')->get();
 	
         return view('user.aboutus', ['data' => $data]);

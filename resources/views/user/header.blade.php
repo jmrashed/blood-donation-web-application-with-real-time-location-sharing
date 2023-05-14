@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <!-- responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{ @$page_title or "Blood Donation" }}</title>
+        <title>@yield('title')</title>
     <!-- responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="{{ asset("public/user/images/resources/favicon.png")}}" sizes="16x16">

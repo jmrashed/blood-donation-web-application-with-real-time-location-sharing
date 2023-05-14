@@ -35,7 +35,7 @@
                             </a>
 
                         </div>
-                        <h3 class="box-title">{{$data->name}}</h3>
+                        <h3 class="box-title">{{@$data->name}}</h3>
 
                     </div>
 
@@ -52,10 +52,10 @@
                             </thead>
                             <tbody> 
                                 <tr>
-                                    <td>{{$data->name}}</td>
-                                    <td>{{$data->email}}</td> 
+                                    <td>{{@$data->name}}</td>
+                                    <td>{{@$data->email}}</td> 
                                     <td> 
-                                        <a href="{{url('/admin')}}/{{$data->id}}/edit" class="btn btn-primary btn-xs"><i class="fa fa-fw fa-edit"></i> </a>
+                                        <a href="{{url('/admin')}}/{{@$data->id}}/edit" class="btn btn-primary btn-xs"><i class="fa fa-fw fa-edit"></i> </a>
                                         <a href="#" class="btn  btn-danger btn-xs"><i class="fa fa-fw fa-remove"></i></a>
                                         <a href="#" class="btn  btn-info btn-xs"><i class="fa fa-fw fa-print"></i></a>
                                     </td>
